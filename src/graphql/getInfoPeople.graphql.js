@@ -12,6 +12,13 @@ query person($id: ID!){
       hairColor
       skinColor
       birthYear
+      vehicleConnection{
+        vehicles{
+          name
+          model
+          vehicleClass
+        }
+      }
     }
 }
 `;

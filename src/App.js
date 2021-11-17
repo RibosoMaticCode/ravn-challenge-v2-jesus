@@ -6,21 +6,27 @@ import InfoPeople from "./components/InfoPeople";
 
 function App() {
 
-  // Declaración de una variable de estado que llamaremos "count"
+  /*
+    state variables to define / capture person id and 
+    show or not detailed person information.
+  */
+
   const [personId, setPersonId] = useState("");
   const [init, setInit] = useState(false);
-  const [titlePage, setTitlePage] = useState('Ravn Star Wars Registry');
 
-  // Metodo
+  // method to set changes in state variables
+
   const showPerson = (newId) =>{
     setPersonId(newId);
     setInit(true);
   }
+
+  // main component calls
   
   return (
     <ApolloProvider client={client}>
       <header className="header">
-      <h1 className="title">{titlePage}</h1>
+      <h1 className="title">Ravn Star Wars Registry</h1>
       </header>
 
       <main>
@@ -31,6 +37,7 @@ function App() {
         </div>
 
         <div className="content">
+          { /* init is true when user clic on person */ }
           { init && 
             <InfoPeople 
             id={personId}

@@ -16,6 +16,9 @@ query allPeople($first: Int, $after: String){
           homeworld {
             name
           }
+          species{
+            name
+          }
         }
       }
   }

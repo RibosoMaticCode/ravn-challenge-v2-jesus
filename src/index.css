@@ -1,3 +1,4 @@
+/* DEFAULTS */
 *{
   padding: 0;
   margin: 0;
@@ -9,17 +10,6 @@ strong{
   font-weight: 500;
   text-transform: capitalize;
 }
-header{
-  background-color: #000;
-}
-header *{
-  color:#fff;
-}
-main{
-  display: flex;
-  grid-template-columns: 1fr 4fr;
-}
-
 :root{
   --textDark: #333333;
   --textLight: #828282;
@@ -48,8 +38,7 @@ main{
   top: 16px;
 
   /* Header */
-
-  
+ 
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
@@ -58,6 +47,13 @@ main{
   letter-spacing: 0.0125em;
   color: var(--gray6);
 }
+
+/* MAIN BLOCK */
+main{
+  display: flex;
+  grid-template-columns: 1fr 4fr;
+}
+
 
 /* SIDEBAR */
 .sidebar{
@@ -117,25 +113,26 @@ main{
 .inner-content section {
   margin: 20px 0;
 }
+.inner-content section h2{
+  font-size: 17px;
+  font-weight: 500;
+  color:var(--textDark)
+}
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.grid div {
-  border-bottom: 1px solid gray;
+.detail-list{
   padding: 16px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--gray6);
 }
-.grid .detail-title{
+.detail-title{
   color:var(--textLight);
-  font-weight: bold;
+  font-weight: 500;
 }
-.grid .detail{
+.detail{
   text-align: right;
-}
-.inner-content section {
-    margin: 20px 0;
 }
 
 /* LOADING CELL */
